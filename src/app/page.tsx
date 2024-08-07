@@ -1,37 +1,33 @@
-import Link from "next/link";
+import Link from 'next/link'
+import { Badge } from '~/components/ui/badge'
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
-        </div>
+    <main className="flex min-h-screen flex-col items-center justify-center">
+      <div className="max-w-5xl">
+        <h1 className="text-2xl font-bold">少女祈祷中</h1>
+        <Badge>JP</Badge>
+        <p>
+          このウェブサイトは、ゲーム『学園アイドルマスター』の非公式アシスタントとして計画されており、計算機やデータベースなどの機能を提供する予定です。
+          <ruby>
+            様々な理由<rp>(</rp>
+            <rt>ゲームに時間がかかりすぎる</rt>
+            <rp>)</rp>
+          </ruby>
+          により、現在はまだ建設中です。協力に興味がある場合は、contact@gakumas.moeまでご連絡ください
+        </p>
+
+        <Badge>ZH</Badge>
+        <p lang="zh">
+          本网站计划作为游戏《学园偶像大师》的非官方助手，提供计算器和数据库等功能，由于
+          <ruby>
+            种种原因<rp>(</rp>
+            <rt>游戏太花时间了</rt>
+            <rp>)</rp>
+          </ruby>
+          ，目前还在建设中。如果对于合作感兴趣，请联系contact@gakumas.moe
+        </p>
       </div>
     </main>
-  );
+  )
 }
