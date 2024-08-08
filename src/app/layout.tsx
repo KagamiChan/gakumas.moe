@@ -4,7 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '初星学園コンピュータ研究部',
+  title: '初星学園サーポート科',
   description: '『学園アイドルマスター』非公式アシスタント',
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 }
