@@ -21,6 +21,7 @@ import {
   TableHeader,
   TableRow,
 } from '../ui/table'
+import { cn } from '~/lib/utils'
 
 const schema = z.object({
   vocal: z.number().min(0).max(1500),
@@ -161,17 +162,27 @@ export const Calculator = () => {
                     <RadioGroup
                       onValueChange={(value) => field.onChange(Number(value))}
                       defaultValue={String(field.value)}
-                      className="flex gap-8"
+                      className="flex gap-4"
                     >
                       {[1, 2, 3].map((value) => (
                         <FormItem
                           key={value}
-                          className="flex items-center space-x-3 space-y-0"
+                          className={cn(
+                            'flex flex-grow items-center space-x-3 space-y-0 rounded-bl-xl rounded-tr-xl p-2',
+                            {
+                              'bg-secondary':
+                                String(field.value) !== String(value),
+                              'bg-[#FFE7BF]':
+                                String(field.value) === String(value),
+                            },
+                          )}
                         >
                           <FormControl>
                             <RadioGroupItem value={String(value)} />
                           </FormControl>
-                          <FormLabel className="font-normal">{value}</FormLabel>
+                          <FormLabel className="flex-grow font-normal">
+                            {value}
+                          </FormLabel>
                         </FormItem>
                       ))}
                     </RadioGroup>
