@@ -112,7 +112,6 @@ export const Calculator = () => {
   })
 
   const values = form.watch()
-  console.table(values)
 
   const finalParameter =
     ensureMaxWithBonus(ensureNumber(values.dance)) +
@@ -123,78 +122,90 @@ export const Calculator = () => {
 
   const rankingPoints = rankingPointsTable[values.finalExamRanking] ?? 0
 
-  console.table({ parameterPoints, rankingPoints })
-
   return (
-    <Form {...form}>
-      <form className="w-2/3 space-y-6">
-        {parameterFields.map((parameter) => (
-          <FormField
-            key={parameter}
-            control={form.control}
-            name={parameter}
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="capitalize">{parameter}</FormLabel>
-                <FormControl>
-                  <Input type="number" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        ))}
-        <FormField
-          control={form.control}
-          name="finalExamRanking"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="capitalize">Ranking</FormLabel>
-              <FormControl>
-                <RadioGroup
-                  onValueChange={(value) => field.onChange(Number(value))}
-                  defaultValue={String(field.value)}
-                  className="flex space-x-4"
-                >
-                  {[1, 2, 3].map((value) => (
-                    <FormItem
-                      key={value}
-                      className="flex items-center space-x-3 space-y-0"
-                    >
+    <div className="flex max-w-96 flex-col items-center justify-center gap-6">
+      <section>
+        <Form {...form}>
+          <form>
+            <FormLabel>パラメータ（最終試験前）</FormLabel>
+            <div className="flex gap-4">
+              {parameterFields.map((parameter) => (
+                <FormField
+                  key={parameter}
+                  control={form.control}
+                  name={parameter}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="capitalize">{parameter}</FormLabel>
                       <FormControl>
-                        <RadioGroupItem value={String(value)} />
+                        <Input
+                          type="number"
+                          {...field}
+                          inputMode="numeric"
+                          onFocus={(e) => e.currentTarget.select()}
+                        />
                       </FormControl>
-                      <FormLabel className="font-normal">{value}</FormLabel>
+                      <FormMessage />
                     </FormItem>
-                  ))}
-                </RadioGroup>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </form>
-      {finalParameter}
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Ranking</TableHead>
-            <TableHead>Required Final Exam Score</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {Object.entries(pointsTable).map(([ranking, points]) => (
-            <TableRow key={ranking}>
-              <TableCell>{ranking}</TableCell>
-              <TableCell>
-                {getRequiredFinalExamScore(
-                  points - parameterPoints - rankingPoints,
-                )}
-              </TableCell>
+                  )}
+                />
+              ))}
+            </div>
+            <FormField
+              control={form.control}
+              name="finalExamRanking"
+              render={({ field }) => (
+                <FormItem className="mt-4">
+                  <FormLabel className="capitalize">最終試験順位</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(Number(value))}
+                      defaultValue={String(field.value)}
+                      className="flex gap-8"
+                    >
+                      {[1, 2, 3].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-3 space-y-0"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={String(value)} />
+                          </FormControl>
+                          <FormLabel className="font-normal">{value}</FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </form>
+        </Form>
+      </section>
+      <section className="w-full">
+        <h2>パラメータ合計値（ボーナス加算後）：{finalParameter}</h2>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>評価</TableHead>
+              <TableHead>必要な最終試験スコア</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Form>
+          </TableHeader>
+          <TableBody>
+            {Object.entries(pointsTable).map(([ranking, points]) => (
+              <TableRow key={ranking}>
+                <TableCell>{ranking}</TableCell>
+                <TableCell>
+                  {getRequiredFinalExamScore(
+                    points - parameterPoints - rankingPoints,
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </section>
+    </div>
   )
 }
