@@ -1,4 +1,5 @@
-import '@fontsource/ibm-plex-sans-jp'
+import '@fontsource/ibm-plex-sans-jp/400.css'
+import '@fontsource/ibm-plex-sans-jp/600.css'
 
 import '~/styles/globals.css'
 

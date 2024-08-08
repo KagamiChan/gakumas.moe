@@ -140,6 +140,7 @@ export const Calculator = () => {
                       <FormLabel className="capitalize">{parameter}</FormLabel>
                       <FormControl>
                         <Input
+                          className="font-semibold"
                           type="number"
                           {...field}
                           inputMode="numeric"

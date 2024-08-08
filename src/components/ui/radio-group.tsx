@@ -36,14 +36,13 @@ const RadioGroupItem = React.forwardRef<
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
           fill="currentColor"
-          stroke="currentColor"
-          className="lucide lucide-circle h-3 w-3 fill-[#ff6900]"
+          className="lucide lucide-circle h-[0.8em] w-[0.8em] fill-[#ff6900]"
         >
-          <circle cx="12" cy="12" r="8" />
+          <circle cx="8" cy="8" r="6" />
         </svg>
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
