@@ -6,8 +6,19 @@ import '~/styles/globals.css'
 import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '初星学園サーポート科',
+  title: '学マス計算機α by 初星学園サーポート科',
   description: '『学園アイドルマスター』非公式アシスタント',
+  keywords: [
+    '学園アイドルマスター',
+    '学マス',
+    '計算機',
+    '初星学園',
+    'Gakumas',
+    'THE IDOLM@STER',
+    'アイドルマスター',
+    'Calculator',
+    'Gakuen Idolmaster',
+  ],
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 }
 
