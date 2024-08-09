@@ -192,6 +192,7 @@ export const Calculator = () => {
                         defaultValue={String(field.value)}
                         className="flex gap-4"
                       >
+                        <FormLabel className="sr-only">最終試験順位</FormLabel>
                         {[1, 2, 3].map((value) => (
                           <FormItem
                             key={value}
@@ -238,6 +239,7 @@ export const Calculator = () => {
           <TableHeader>
             <TableRow>
               <TableHead>評価</TableHead>
+              <TableHead>Pt</TableHead>
               <TableHead>必要な最終試験スコア</TableHead>
             </TableRow>
           </TableHeader>
@@ -245,6 +247,7 @@ export const Calculator = () => {
             {Object.entries(pointsTable).map(([ranking, points]) => (
               <TableRow key={ranking}>
                 <TableCell>{ranking}</TableCell>
+                <TableCell>{points}</TableCell>
                 <TableCell>
                   {getRequiredFinalExamScore(
                     points - parameterPoints - rankingPoints,
