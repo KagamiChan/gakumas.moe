@@ -4,10 +4,11 @@ import '@fontsource/ibm-plex-sans-jp/600.css'
 import '~/styles/globals.css'
 
 import { type Metadata } from 'next'
+import { APP_DEFAULT_TITLE, APP_DESCRIPTION } from './constants'
 
 export const metadata: Metadata = {
-  title: '学マス計算機α by 初星学園サーポート科',
-  description: '学園アイドルマスター非公式アシスタント',
+  title: APP_DEFAULT_TITLE,
+  description: APP_DESCRIPTION,
   keywords: [
     '学園アイドルマスター',
     '学マス',
@@ -19,7 +20,11 @@ export const metadata: Metadata = {
     'Calculator',
     'Gakuen Idolmaster',
   ],
-  icons: [{ rel: 'icon', url: '/favicon.ico' }],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: APP_DEFAULT_TITLE,
+  },
 }
 
 export default function RootLayout({
