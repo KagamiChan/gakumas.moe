@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: APP_DEFAULT_TITLE,
   },
+  formatDetection: {
+    telephone: false,
+  },
 }
 
 export default function RootLayout({

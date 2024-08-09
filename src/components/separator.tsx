@@ -7,6 +7,7 @@ export const Separator = ({ className }: React.HTMLProps<HTMLDivElement>) => {
         'my-4 flex w-full items-center gap-2 text-[#ffd200] before:block before:h-0.5 before:flex-grow before:bg-current after:block after:h-0.5 after:flex-grow after:bg-current',
         className,
       )}
+      role="separator"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
         <path
