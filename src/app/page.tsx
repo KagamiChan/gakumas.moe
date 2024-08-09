@@ -26,7 +26,7 @@ export default function HomePage() {
             ソースコード
           </a>
         </div>
-        <span className="text-xs">©2024 虹夏工房 feat.かがみ</span>
+        <span className="text-xs">gakumas.moe ©2024 虹夏工房 feat.かがみ</span>
       </footer>
     </main>
   )
