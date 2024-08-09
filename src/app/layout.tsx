@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  metadataBase: new URL('https://gakumas.moe'),
 }
 
 export default function RootLayout({

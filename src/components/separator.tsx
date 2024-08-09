@@ -11,7 +11,7 @@ export const Separator = ({ className }: React.HTMLProps<HTMLDivElement>) => {
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           fill="currentColor"
           d="M7.957.095A10.892 10.892 0 010 8.047a10.89 10.89 0 017.957 7.952 10.774 10.774 0 012.869-5.084 10.78 10.78 0 015.078-2.868 10.788 10.788 0 01-5.078-2.868A10.778 10.778 0 017.957.095z"
         />
