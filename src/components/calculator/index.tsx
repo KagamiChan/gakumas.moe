@@ -22,6 +22,7 @@ import {
   TableRow,
 } from '../ui/table'
 import { cn } from '~/lib/utils'
+import { Heading } from '../heading'
 
 const schema = z.object({
   vocal: z.number().min(0).max(1500),
@@ -135,15 +136,7 @@ export const Calculator = () => {
         <Form {...form}>
           <form className="flex max-w-96 flex-col gap-6">
             <section>
-              <h2
-                className="w-full rounded-tr-xl px-2 text-primary-foreground"
-                style={{
-                  background:
-                    'linear-gradient(135deg, transparent 0%, transparent 70%, #ffdca5 70%, #ffdca5), linear-gradient(to right, #ffa91f, #ffc756 70%)',
-                }}
-              >
-                パラメータ（最終試験前）
-              </h2>
+              <Heading as="h2">パラメータ（最終試験前）</Heading>
               <div className="flex gap-4">
                 {parameterFields.map((parameter) => (
                   <FormField
@@ -172,15 +165,7 @@ export const Calculator = () => {
               </div>
             </section>
             <section>
-              <h2
-                className="w-full rounded-tr-xl px-2 text-primary-foreground"
-                style={{
-                  background:
-                    'linear-gradient(135deg, transparent 0%, transparent 70%, #ffdca5 70%, #ffdca5), linear-gradient(to right, #ffa91f, #ffc756 70%)',
-                }}
-              >
-                最終試験順位
-              </h2>
+              <Heading as="h2">最終試験順位</Heading>
               <FormField
                 control={form.control}
                 name="finalExamRanking"
@@ -225,15 +210,7 @@ export const Calculator = () => {
         </Form>
       </section>
       <section className="w-full">
-        <h2
-          className="w-full rounded-tr-xl px-2 text-primary-foreground"
-          style={{
-            background:
-              'linear-gradient(135deg, transparent 0%, transparent 70%, #ffdca5 70%, #ffdca5), linear-gradient(to right, #ffa91f, #ffc756 70%)',
-          }}
-        >
-          早見表
-        </h2>
+        <Heading as="h2">計算結果</Heading>
         <p>最終パラメータ合計値：{finalParameter}</p>
         <Table>
           <TableHeader>
