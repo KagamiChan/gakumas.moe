@@ -42,6 +42,12 @@ const rankingPointsTable: Record<number, number> = {
   3: 500,
 }
 
+const finalExamParameterBonus: Record<number, number> = {
+  1: 30,
+  2: 20,
+  3: 10,
+}
+
 const pointsTable = {
   S: 13000,
   'A+': 11500,
@@ -76,8 +82,6 @@ const scoreImpact = (score: number) => {
       (rangeValue(40000, Infinity, score) * 1) / 100,
   )
 
-  console.log('scoreImpact', score, result)
-
   return result
 }
 const getRequiredFinalExamScore = (points: number) => {
@@ -90,7 +94,6 @@ const getRequiredFinalExamScore = (points: number) => {
       (rangeValue(scoreImpact(30000), scoreImpact(40000), points) * 100) / 2 +
       rangeValue(scoreImpact(40000), Infinity, points) / 0.01,
   )
-  console.log('getRequiredFinalExamScore', points, result)
   return result
 }
 
@@ -99,7 +102,8 @@ const ensureNumber = (value: string | number) => {
   return Number.isNaN(number) ? 0 : number
 }
 
-const ensureMaxWithBonus = (value: number) => Math.min(1500, value + 30)
+const ensureMaxWithBonus = (value: number, bonus: number) =>
+  Math.min(1500, value + bonus)
 
 export const Calculator = () => {
   const form = useForm<z.infer<typeof schema>>({
@@ -114,10 +118,12 @@ export const Calculator = () => {
 
   const values = form.watch()
 
+  const parameterBonus = finalExamParameterBonus[values.finalExamRanking] ?? 0
+
   const finalParameter =
-    ensureMaxWithBonus(ensureNumber(values.dance)) +
-    ensureMaxWithBonus(ensureNumber(values.vocal)) +
-    ensureMaxWithBonus(ensureNumber(values.visual))
+    ensureMaxWithBonus(ensureNumber(values.dance), parameterBonus) +
+    ensureMaxWithBonus(ensureNumber(values.vocal), parameterBonus) +
+    ensureMaxWithBonus(ensureNumber(values.visual), parameterBonus)
 
   const parameterPoints = Math.floor((finalParameter * 23) / 10)
 
@@ -127,76 +133,107 @@ export const Calculator = () => {
     <div className="flex max-w-96 flex-col items-center justify-center gap-6">
       <section>
         <Form {...form}>
-          <form>
-            <FormLabel>パラメータ（最終試験前）</FormLabel>
-            <div className="flex gap-4">
-              {parameterFields.map((parameter) => (
-                <FormField
-                  key={parameter}
-                  control={form.control}
-                  name={parameter}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="capitalize">{parameter}</FormLabel>
-                      <FormControl>
-                        <Input
-                          className="font-semibold"
-                          type="number"
-                          {...field}
-                          inputMode="numeric"
-                          onFocus={(e) => e.currentTarget.select()}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              ))}
-            </div>
-            <FormField
-              control={form.control}
-              name="finalExamRanking"
-              render={({ field }) => (
-                <FormItem className="mt-4">
-                  <FormLabel className="capitalize">最終試験順位</FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={(value) => field.onChange(Number(value))}
-                      defaultValue={String(field.value)}
-                      className="flex gap-4"
-                    >
-                      {[1, 2, 3].map((value) => (
-                        <FormItem
-                          key={value}
-                          className={cn(
-                            'flex flex-grow items-center space-x-3 space-y-0 rounded-bl-xl rounded-tr-xl p-2',
-                            {
-                              'bg-secondary':
-                                String(field.value) !== String(value),
-                              'bg-[#FFE7BF]':
-                                String(field.value) === String(value),
-                            },
-                          )}
-                        >
-                          <FormControl>
-                            <RadioGroupItem value={String(value)} />
-                          </FormControl>
-                          <FormLabel className="flex-grow font-normal">
-                            {value}
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <form className="flex max-w-96 flex-col gap-6">
+            <section>
+              <h2
+                className="w-full rounded-tr-xl px-2 text-primary-foreground"
+                style={{
+                  background:
+                    'linear-gradient(135deg, transparent 0%, transparent 70%, #ffdca5 70%, #ffdca5), linear-gradient(to right, #ffa91f, #ffc756 70%)',
+                }}
+              >
+                パラメータ（最終試験前）
+              </h2>
+              <div className="flex gap-4">
+                {parameterFields.map((parameter) => (
+                  <FormField
+                    key={parameter}
+                    control={form.control}
+                    name={parameter}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="capitalize">
+                          {parameter}
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            className="font-semibold"
+                            type="number"
+                            {...field}
+                            inputMode="numeric"
+                            onFocus={(e) => e.currentTarget.select()}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                ))}
+              </div>
+            </section>
+            <section>
+              <h2
+                className="w-full rounded-tr-xl px-2 text-primary-foreground"
+                style={{
+                  background:
+                    'linear-gradient(135deg, transparent 0%, transparent 70%, #ffdca5 70%, #ffdca5), linear-gradient(to right, #ffa91f, #ffc756 70%)',
+                }}
+              >
+                最終試験順位
+              </h2>
+              <FormField
+                control={form.control}
+                name="finalExamRanking"
+                render={({ field }) => (
+                  <FormItem className="mt-4">
+                    <FormControl>
+                      <RadioGroup
+                        onValueChange={(value) => field.onChange(Number(value))}
+                        defaultValue={String(field.value)}
+                        className="flex gap-4"
+                      >
+                        {[1, 2, 3].map((value) => (
+                          <FormItem
+                            key={value}
+                            className={cn(
+                              'flex flex-grow items-center space-x-3 space-y-0 rounded-bl-xl rounded-tr-xl p-2',
+                              {
+                                'bg-secondary':
+                                  String(field.value) !== String(value),
+                                'bg-[#FFE7BF]':
+                                  String(field.value) === String(value),
+                              },
+                            )}
+                          >
+                            <FormControl>
+                              <RadioGroupItem value={String(value)} />
+                            </FormControl>
+                            <FormLabel className="flex-grow font-normal">
+                              {value}
+                            </FormLabel>
+                          </FormItem>
+                        ))}
+                      </RadioGroup>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </section>
           </form>
         </Form>
       </section>
       <section className="w-full">
-        <h2>パラメータ合計値（ボーナス加算後）：{finalParameter}</h2>
+        <h2
+          className="w-full rounded-tr-xl px-2 text-primary-foreground"
+          style={{
+            background:
+              'linear-gradient(135deg, transparent 0%, transparent 70%, #ffdca5 70%, #ffdca5), linear-gradient(to right, #ffa91f, #ffc756 70%)',
+          }}
+        >
+          早見表
+        </h2>
+        <p>最終パラメータ合計値：{finalParameter}</p>
         <Table>
           <TableHeader>
             <TableRow>
