@@ -86,7 +86,6 @@ const scoreImpact = (score: number) => {
   return result
 }
 const getRequiredFinalExamScore = (points: number) => {
-  console.log(points)
   const result = Math.ceil(
     (rangeValue(0, scoreImpact(5000), points) * 10) / 3 +
       (rangeValue(scoreImpact(5000), scoreImpact(10000), points) * 100) / 15 +
