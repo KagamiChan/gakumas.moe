@@ -10,7 +10,12 @@ export const contentType = 'image/png'
 export default function Icon() {
   return new ImageResponse(
     (
-      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="256"
+        height="256"
+        viewBox="0 0 200 200"
+      >
         <g paint-order="markers stroke fill">
           <path fill="#fff" d="M0 0h200v200H0z" />
           <g fill="#f7f7f7">
