@@ -23,3 +23,7 @@ corepack pnpm dev
 ## Credits
 - https://github.com/leafierlemon/idolmaster_gakuen_score_calculator
 - https://seesaawiki.jp/gakumasu/
+
+
+## License
+MIT
