@@ -1,18 +1,20 @@
 'use client'
-import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useCallback, useMemo } from 'react'
+import { useForm } from 'react-hook-form'
 import z from 'zod'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from '~/components/ui/form'
 import { Input } from '~/components/ui/input'
-import { RadioGroupItem, RadioGroup } from '../ui/radio-group'
+import { cn } from '~/lib/utils'
+import { Heading } from '../heading'
+import { RadioGroup, RadioGroupItem } from '../ui/radio-group'
 import {
   Table,
   TableBody,
@@ -21,13 +23,17 @@ import {
   TableHeader,
   TableRow,
 } from '../ui/table'
-import { cn } from '~/lib/utils'
-import { Heading } from '../heading'
+
+enum ProduceDifficulty {
+  Pro = 'Pro',
+  Master = 'Master',
+}
 
 const schema = z.object({
-  vocal: z.number().min(0).max(1500),
-  dance: z.number().min(0).max(1500),
-  visual: z.number().min(0).max(1500),
+  difficulty: z.nativeEnum(ProduceDifficulty),
+  vocal: z.number().min(0).max(1800),
+  dance: z.number().min(0).max(1800),
+  visual: z.number().min(0).max(1800),
   finalExamRanking: z.number().min(1).max(3),
 })
 
@@ -103,13 +109,11 @@ const ensureNumber = (value: string | number) => {
   return Number.isNaN(number) ? 0 : number
 }
 
-const ensureMaxWithBonus = (value: number, bonus: number) =>
-  Math.min(1500, value + bonus)
-
 export const Calculator = () => {
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
     defaultValues: {
+      difficulty: ProduceDifficulty.Master,
       vocal: 0,
       dance: 0,
       visual: 0,
@@ -121,10 +125,27 @@ export const Calculator = () => {
 
   const parameterBonus = finalExamParameterBonus[values.finalExamRanking] ?? 0
 
-  const finalParameter =
-    ensureMaxWithBonus(ensureNumber(values.dance), parameterBonus) +
-    ensureMaxWithBonus(ensureNumber(values.vocal), parameterBonus) +
-    ensureMaxWithBonus(ensureNumber(values.visual), parameterBonus)
+  const parameterMax =
+    values.difficulty === ProduceDifficulty.Master ? 1800 : 1500
+
+  const ensureMaxWithBonus = useCallback(
+    (value: number, bonus: number) => Math.min(parameterMax, value + bonus),
+    [parameterMax],
+  )
+
+  const finalParameter = useMemo(
+    () =>
+      ensureMaxWithBonus(ensureNumber(values.dance), parameterBonus) +
+      ensureMaxWithBonus(ensureNumber(values.vocal), parameterBonus) +
+      ensureMaxWithBonus(ensureNumber(values.visual), parameterBonus),
+    [
+      ensureMaxWithBonus,
+      values.dance,
+      values.vocal,
+      values.visual,
+      parameterBonus,
+    ],
+  )
 
   const parameterPoints = Math.floor((finalParameter * 23) / 10)
 
@@ -163,6 +184,50 @@ export const Calculator = () => {
                   />
                 ))}
               </div>
+            </section>
+            <section>
+              <Heading as="h2">プロデュース難易度</Heading>
+              <FormField
+                control={form.control}
+                name="difficulty"
+                render={({ field }) => (
+                  <FormItem className="mt-4">
+                    <FormControl>
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        className="flex gap-4"
+                      >
+                        <FormLabel className="sr-only">最終試験順位</FormLabel>
+                        {[ProduceDifficulty.Master, ProduceDifficulty.Pro].map(
+                          (value) => (
+                            <FormItem
+                              key={value}
+                              className={cn(
+                                'flex flex-grow items-center space-x-3 space-y-0 rounded-bl-xl rounded-tr-xl p-2',
+                                {
+                                  'bg-secondary':
+                                    String(field.value) !== String(value),
+                                  'bg-[#FFE7BF]':
+                                    String(field.value) === String(value),
+                                },
+                              )}
+                            >
+                              <FormControl>
+                                <RadioGroupItem value={value} />
+                              </FormControl>
+                              <FormLabel className="flex-grow font-normal">
+                                {value.toLocaleUpperCase()}
+                              </FormLabel>
+                            </FormItem>
+                          ),
+                        )}
+                      </RadioGroup>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </section>
             <section>
               <Heading as="h2">最終試験順位</Heading>
