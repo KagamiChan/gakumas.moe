@@ -276,7 +276,9 @@ export const Calculator = () => {
       </section>
       <section className="w-full">
         <Heading as="h2">計算結果</Heading>
-        <p>最終パラメータ合計値：{finalParameter}</p>
+        <p data-testid="final-parameter">
+          最終パラメータ合計値：{finalParameter}
+        </p>
         <Table>
           <TableHeader>
             <TableRow>
@@ -287,10 +289,10 @@ export const Calculator = () => {
           </TableHeader>
           <TableBody>
             {Object.entries(pointsTable).map(([ranking, points]) => (
-              <TableRow key={ranking}>
+              <TableRow key={ranking} data-testid={`result-rank-${ranking}`}>
                 <TableCell>{ranking}</TableCell>
                 <TableCell>{points}</TableCell>
-                <TableCell>
+                <TableCell data-testid={`required-points-${ranking}`}>
                   {getRequiredFinalExamScore(
                     points - parameterPoints - rankingPoints,
                   )}
