@@ -46,3 +46,8 @@ yarn-error.log*
 .idea
 
 public/sw.js
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
