@@ -7,7 +7,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans-jp": "^5.0.13",
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.47.2",
-    "@types/eslint": "^9.0.0",
+    "@types/eslint": "^8.56.10",
     "@types/node": "^22.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

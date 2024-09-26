@@ -1,0 +1,23 @@
+name: Sanity Checks
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+jobs:
+  sanity:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: corepack pnpm install
+    - name: Linting
+      run: corepack pnpm lint
+    - name: Typechecking
+      run: corepack pnpm typecheck
+    - name: Build
+      run: corepack pnpm build
