@@ -56,6 +56,7 @@ const finalExamParameterBonus: Record<number, number> = {
 }
 
 const pointsTable = {
+  SS: 16000,
   'S+': 14500,
   S: 13000,
   'A+': 11500,
