@@ -205,7 +205,7 @@ export const Calculator = () => {
                             <FormItem
                               key={value}
                               className={cn(
-                                'flex flex-grow items-center space-x-3 space-y-0 rounded-bl-xl rounded-tr-xl p-2',
+                                'flex grow items-center space-y-0 space-x-3 rounded-tr-xl rounded-bl-xl p-2',
                                 {
                                   'bg-secondary':
                                     String(field.value) !== String(value),
@@ -217,7 +217,7 @@ export const Calculator = () => {
                               <FormControl>
                                 <RadioGroupItem value={value} />
                               </FormControl>
-                              <FormLabel className="flex-grow font-normal">
+                              <FormLabel className="grow font-normal">
                                 {value.toLocaleUpperCase()}
                               </FormLabel>
                             </FormItem>
@@ -248,7 +248,7 @@ export const Calculator = () => {
                           <FormItem
                             key={value}
                             className={cn(
-                              'flex flex-grow items-center space-x-3 space-y-0 rounded-bl-xl rounded-tr-xl p-2',
+                              'flex grow items-center space-y-0 space-x-3 rounded-tr-xl rounded-bl-xl p-2',
                               {
                                 'bg-secondary':
                                   String(field.value) !== String(value),
@@ -260,7 +260,7 @@ export const Calculator = () => {
                             <FormControl>
                               <RadioGroupItem value={String(value)} />
                             </FormControl>
-                            <FormLabel className="flex-grow font-normal">
+                            <FormLabel className="grow font-normal">
                               {value}
                             </FormLabel>
                           </FormItem>

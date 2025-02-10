@@ -4,7 +4,7 @@ export const Separator = ({ className }: React.HTMLProps<HTMLDivElement>) => {
   return (
     <div
       className={cn(
-        'my-4 flex w-full items-center gap-2 text-[#ffd200] before:block before:h-0.5 before:flex-grow before:bg-current after:block after:h-0.5 after:flex-grow after:bg-current',
+        'my-4 flex w-full items-center gap-2 text-[#ffd200] before:block before:h-0.5 before:grow before:bg-current after:block after:h-0.5 after:grow after:bg-current',
         className,
       )}
       role="separator"

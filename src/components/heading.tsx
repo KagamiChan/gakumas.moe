@@ -14,7 +14,7 @@ export const Heading = ({
     <As
       {...props}
       className={cn(
-        'w-full rounded-tr-xl px-2 text-primary-foreground',
+        'text-primary-foreground w-full rounded-tr-xl px-2',
         className,
       )}
       style={{
