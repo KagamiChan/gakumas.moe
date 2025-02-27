@@ -12,9 +12,7 @@ import {
   FormMessage,
 } from '~/components/ui/form'
 import { Input } from '~/components/ui/input'
-import { cn } from '~/lib/utils'
 import { Heading } from '../heading'
-import { RadioGroup, RadioGroupItem } from '../ui/radio-group'
 import {
   Table,
   TableBody,
@@ -23,6 +21,12 @@ import {
   TableHeader,
   TableRow,
 } from '../ui/table'
+import { RadioGroup } from '../radio-group'
+
+enum ProduceMode {
+  Hajime = 'Hajime',
+  NIA = 'NIA',
+}
 
 enum ProduceDifficulty {
   Pro = 'Pro',
@@ -30,11 +34,12 @@ enum ProduceDifficulty {
 }
 
 const schema = z.object({
+  mode: z.nativeEnum(ProduceMode),
   difficulty: z.nativeEnum(ProduceDifficulty),
   vocal: z.number().min(0).max(1800),
   dance: z.number().min(0).max(1800),
   visual: z.number().min(0).max(1800),
-  finalExamRanking: z.number().min(1).max(3),
+  finalExamRanking: z.enum(['1', '2', '3']),
 })
 
 const parameterFields: ['vocal', 'dance', 'visual'] = [
@@ -118,7 +123,7 @@ export const Calculator = () => {
       vocal: 0,
       dance: 0,
       visual: 0,
-      finalExamRanking: 1,
+      finalExamRanking: '1',
     },
   })
 
@@ -195,35 +200,14 @@ export const Calculator = () => {
                   <FormItem className="mt-4">
                     <FormControl>
                       <RadioGroup
+                        value={field.value}
+                        options={[
+                          { key: ProduceDifficulty.Master, label: 'Master' },
+                          { key: ProduceDifficulty.Pro, label: 'Pro' },
+                        ]}
                         onValueChange={field.onChange}
-                        defaultValue={field.value}
-                        className="flex gap-4"
-                      >
-                        <FormLabel className="sr-only">最終試験順位</FormLabel>
-                        {[ProduceDifficulty.Master, ProduceDifficulty.Pro].map(
-                          (value) => (
-                            <FormItem
-                              key={value}
-                              className={cn(
-                                'flex grow items-center space-y-0 space-x-3 rounded-tr-xl rounded-bl-xl p-2',
-                                {
-                                  'bg-secondary':
-                                    String(field.value) !== String(value),
-                                  'bg-[#FFE7BF]':
-                                    String(field.value) === String(value),
-                                },
-                              )}
-                            >
-                              <FormControl>
-                                <RadioGroupItem value={value} />
-                              </FormControl>
-                              <FormLabel className="grow font-normal">
-                                {value.toLocaleUpperCase()}
-                              </FormLabel>
-                            </FormItem>
-                          ),
-                        )}
-                      </RadioGroup>
+                        label="プロデュース難易度"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -239,33 +223,15 @@ export const Calculator = () => {
                   <FormItem className="mt-4">
                     <FormControl>
                       <RadioGroup
-                        onValueChange={(value) => field.onChange(Number(value))}
-                        defaultValue={String(field.value)}
-                        className="flex gap-4"
-                      >
-                        <FormLabel className="sr-only">最終試験順位</FormLabel>
-                        {[1, 2, 3].map((value) => (
-                          <FormItem
-                            key={value}
-                            className={cn(
-                              'flex grow items-center space-y-0 space-x-3 rounded-tr-xl rounded-bl-xl p-2',
-                              {
-                                'bg-secondary':
-                                  String(field.value) !== String(value),
-                                'bg-[#FFE7BF]':
-                                  String(field.value) === String(value),
-                              },
-                            )}
-                          >
-                            <FormControl>
-                              <RadioGroupItem value={String(value)} />
-                            </FormControl>
-                            <FormLabel className="grow font-normal">
-                              {value}
-                            </FormLabel>
-                          </FormItem>
-                        ))}
-                      </RadioGroup>
+                        value={field.value}
+                        options={[
+                          { key: '1', label: '1' },
+                          { key: '2', label: '2' },
+                          { key: '3', label: '3' },
+                        ]}
+                        onValueChange={field.onChange}
+                        label="最終試験順位"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
