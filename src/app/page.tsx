@@ -1,5 +1,6 @@
 import { Calculator } from '~/components/calculator'
 import { Logo } from '~/components/logo'
+import { NIANotice } from '~/components/nia-notice'
 import { Separator } from '~/components/separator'
 
 export default function HomePage() {
@@ -9,6 +10,8 @@ export default function HomePage() {
         <Logo className="h-16 w-64" />
         <span className="sr-only">学マス計算機α</span>
       </h1>
+      <NIANotice />
+      <Separator className="max-w-96" />
       <Calculator />
       <Separator className="max-w-96" />
       <footer className="flex flex-col items-center text-sm leading-8">
