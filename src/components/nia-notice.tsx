@@ -3,7 +3,7 @@ export const NIANotice = () => {
     <section className="max-w-sm">
       <h1 className="font-semibold">N.I.A.モードについて</h1>
       <p className="text-sm">
-        N.I.A.モードのサポートはまだ利用できません。その間、
+        N.I.A.モードの対応はまだ利用できません。その間、
         <a
           href="https://gktools.ris.moe/en/calculator/nia"
           className="text-[#ff6900]"
