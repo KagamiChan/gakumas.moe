@@ -5,7 +5,7 @@ export const NIANotice = () => {
       <p className="text-sm">
         N.I.A.モードの対応はまだ利用できません。その間、
         <a
-          href="https://gktools.ris.moe/en/calculator/nia"
+          href="https://gktools.ris.moe/calculator/nia"
           className="text-[#ff6900]"
         >
           N.I.A. Calculator
