@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@fontsource/ibm-plex-sans-jp':
         specifier: ^5.0.13
-        version: 5.2.5
+        version: 5.2.6
       '@hookform/resolvers':
         specifier: ^5.0.0
         version: 5.1.0(react-hook-form@7.57.0(react@19.1.0))
@@ -168,8 +168,8 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@fontsource/ibm-plex-sans-jp@5.2.5':
-    resolution: {integrity: sha512-UX/RF8hWsdFF1Kp/ceGMh9RLw/UBZyTI/dtPawSrkM0T3TwIXGUoop6UwaiKxONQqGkRAGhBBJI+D9iFsRM9Sg==}
+  '@fontsource/ibm-plex-sans-jp@5.2.6':
+    resolution: {integrity: sha512-iFuHd2SA9PZc3QAyvlUXACoo8yg7dw1QMDtYXTDCf1/BgP2xdj2664OB3GYbsqv/opmCguC0olyqhpiRUoOFfQ==}
 
   '@hookform/resolvers@5.1.0':
     resolution: {integrity: sha512-A5tY8gxqvvR0lFfropqpy/gUDOxjwT7LZCxJ8lNA9puK7nFNRl/O0egGKxzdF4JSz/pnnT1O8g76P/YMyTBEFw==}
@@ -2512,7 +2512,7 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@fontsource/ibm-plex-sans-jp@5.2.5': {}
+  '@fontsource/ibm-plex-sans-jp@5.2.6': {}
 
   '@hookform/resolvers@5.1.0(react-hook-form@7.57.0(react@19.1.0))':
     dependencies:
