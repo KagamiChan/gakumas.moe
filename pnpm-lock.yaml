@@ -31,7 +31,7 @@ importers:
         version: 9.0.15(next@15.3.5(@playwright/test@1.54.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.0
-        version: 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.3)
+        version: 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.5)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -61,7 +61,7 @@ importers:
         version: 1.0.7(tailwindcss@4.1.11)
       zod:
         specifier: ^4.0.0
-        version: 4.0.3
+        version: 4.0.5
     devDependencies:
       '@playwright/test':
         specifier: ^1.47.2
@@ -2462,8 +2462,8 @@ packages:
   zod@3.25.63:
     resolution: {integrity: sha512-3ttCkqhtpncYXfP0f6dsyabbYV/nEUW+Xlu89jiXbTBifUfjaSqXOG6JnQPLtqt87n7KAmnMqcjay6c0Wq0Vbw==}
 
-  zod@4.0.3:
-    resolution: {integrity: sha512-V78FonTAxtGAyF2xR75x0YoW8uKXdQiusoPtzbT07vH3mZiGdTQN6INuivHyYT6M2V2YRFDEKIF4ylTJh54EXg==}
+  zod@4.0.5:
+    resolution: {integrity: sha512-/5UuuRPStvHXu7RS+gmvRf4NXrNxpSllGwDnCBcJZtQsKrviYXm54yDGV2KYNLT5kq0lHGcl7lqWJLgSaG+tgA==}
 
 snapshots:
 
@@ -2923,19 +2923,19 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@t3-oss/env-core@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.3)':
+  '@t3-oss/env-core@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.5)':
     optionalDependencies:
       arktype: 2.1.20
       typescript: 5.8.3
-      zod: 4.0.3
+      zod: 4.0.5
 
-  '@t3-oss/env-nextjs@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.3)':
+  '@t3-oss/env-nextjs@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.5)':
     dependencies:
-      '@t3-oss/env-core': 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.3)
+      '@t3-oss/env-core': 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.0.5)
     optionalDependencies:
       arktype: 2.1.20
       typescript: 5.8.3
-      zod: 4.0.3
+      zod: 4.0.5
 
   '@tailwindcss/node@4.1.11':
     dependencies:
@@ -4909,4 +4909,4 @@ snapshots:
 
   zod@3.25.63: {}
 
-  zod@4.0.3: {}
+  zod@4.0.5: {}
