@@ -28,7 +28,7 @@ importers:
         version: 1.2.3(@types/react@19.1.12)(react@19.1.1)
       '@serwist/next':
         specifier: ^9.0.5
-        version: 9.1.1(next@15.5.2(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.9.2)
+        version: 9.2.0(next@15.5.2(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.9.2)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.0
         version: 0.13.8(arktype@2.1.20)(typescript@5.9.2)(zod@4.1.5)
@@ -608,8 +608,8 @@ packages:
   '@rushstack/eslint-patch@1.12.0':
     resolution: {integrity: sha512-5EwMtOqvJMMa3HbmxLlF74e+3/HhwBTMcvt3nqVJgGCozO6hzIPOBlwm8mGVNR9SN2IJpxSnlxczyDjcn7qIyw==}
 
-  '@serwist/build@9.1.1':
-    resolution: {integrity: sha512-AYUwA9KtHWCYaUuo68hctm69MeT7YnYPtvoceY88C4CzjoNBrNkUZsPoDs5xde+8lX7tHYaKfM3KDpmEH1PuNQ==}
+  '@serwist/build@9.2.0':
+    resolution: {integrity: sha512-pmRq0gtg2ZgAHEtyBSVDEibU23ZqrgjeMae+17Z8XS2winZ8rvHCjfvSKGOlqjDWJ7g9NbZRokGGK1T8CYUkBA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       typescript: '>=5.0.0'
@@ -617,8 +617,8 @@ packages:
       typescript:
         optional: true
 
-  '@serwist/next@9.1.1':
-    resolution: {integrity: sha512-QtFTCoU5vWK5YYCwD4BLRn65v6iZ0NsRXWkR8ZoGgghQH3f00wNATIWaL3MYZ2XrJWUThZL5y8wyXUoeEbvwEg==}
+  '@serwist/next@9.2.0':
+    resolution: {integrity: sha512-BQiKhoyEqjZF0rxEWIIiDs46yrmddEbF8kbVsJ/sJMC/xo17gSLouY/hlQMUFOMJ1jQGuZ/L7ep4qhzefcsa1g==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       next: '>=14.0.0'
@@ -627,8 +627,8 @@ packages:
       typescript:
         optional: true
 
-  '@serwist/webpack-plugin@9.1.1':
-    resolution: {integrity: sha512-mVtP36m5/Grzh4ddHU/BLetCZfUrBARRdORHP7+RYVGMBTZYjUidHpasdCgS9hnNalb/hC6FsxOnx7+u/2WhFg==}
+  '@serwist/webpack-plugin@9.2.0':
+    resolution: {integrity: sha512-J7Q7pPQxzVHgS4H+AlEUuo7CkuokoR01/ufxnCDBsk0OMn1ljjpP0kc8WpfzEtLd8d3WNvPBwBMN4Zi9703+mA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       typescript: '>=5.0.0'
@@ -639,8 +639,8 @@ packages:
       webpack:
         optional: true
 
-  '@serwist/window@9.1.1':
-    resolution: {integrity: sha512-zew3GZ8Wqd7ERrr2rbD90K8Ih0Z+aQ2KszN5928K7e1EzAHXPJ3V0PFpdiyOLh2nuMK1PZg+3JftVbLYv7ziHA==}
+  '@serwist/window@9.2.0':
+    resolution: {integrity: sha512-fz96MqC1kZznuFCMCiG70+Z2IPLxByyq4lsDmiVlzX1nPpoCezJXRs0jKE4TV0d2Aipn/WemN26wdmOvuOJxPQ==}
     peerDependencies:
       typescript: '>=5.0.0'
     peerDependenciesMeta:
@@ -978,8 +978,8 @@ packages:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
 
-  ansi-regex@6.1.0:
-    resolution: {integrity: sha512-7HSX4QQb4CspciLpVFwyRe79O3xsIZDDLER21kERQ71oaPodF8jL725AgJMFAYbooIqolJoRLuM81SpeUkpkvA==}
+  ansi-regex@6.2.0:
+    resolution: {integrity: sha512-TKY5pyBkHyADOPYlRT9Lx6F544mPl0vS5Ew7BJ45hA08Q+t3GjbueLliBWN3sMICk6+y7HdyxSzC4bWS8baBdg==}
     engines: {node: '>=12'}
 
   ansi-styles@4.3.0:
@@ -2170,14 +2170,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serwist@9.1.1:
-    resolution: {integrity: sha512-DGwnsIOUmCNOMMsKzmZ9854iW0L0TNYN/E6AGUdEtDP2ZAOxQm32gIQPL9ZJCrs56eLMwXtfTmWjcgNEl+1Jng==}
-    peerDependencies:
-      typescript: '>=5.0.0'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   serwist@9.2.0:
     resolution: {integrity: sha512-T5ZVNQeJ0ivVbDQtvlCm+KCy0JXFpmr+UCXdzg/Ep7bePWfQA405GfITZzbSZkwl2WpJSICGwGpggYJOBuud6A==}
     peerDependencies:
@@ -2876,7 +2868,7 @@ snapshots:
 
   '@rushstack/eslint-patch@1.12.0': {}
 
-  '@serwist/build@9.1.1(typescript@5.9.2)':
+  '@serwist/build@9.2.0(typescript@5.9.2)':
     dependencies:
       common-tags: 1.8.2
       glob: 10.4.5
@@ -2886,33 +2878,33 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
 
-  '@serwist/next@9.1.1(next@15.5.2(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.9.2)':
+  '@serwist/next@9.2.0(next@15.5.2(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.9.2)':
     dependencies:
-      '@serwist/build': 9.1.1(typescript@5.9.2)
-      '@serwist/webpack-plugin': 9.1.1(typescript@5.9.2)
-      '@serwist/window': 9.1.1(typescript@5.9.2)
+      '@serwist/build': 9.2.0(typescript@5.9.2)
+      '@serwist/webpack-plugin': 9.2.0(typescript@5.9.2)
+      '@serwist/window': 9.2.0(typescript@5.9.2)
       chalk: 5.4.1
       glob: 10.4.5
       next: 15.5.2(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      serwist: 9.1.1(typescript@5.9.2)
+      serwist: 9.2.0(typescript@5.9.2)
       zod: 4.0.5
     optionalDependencies:
       typescript: 5.9.2
     transitivePeerDependencies:
       - webpack
 
-  '@serwist/webpack-plugin@9.1.1(typescript@5.9.2)':
+  '@serwist/webpack-plugin@9.2.0(typescript@5.9.2)':
     dependencies:
-      '@serwist/build': 9.1.1(typescript@5.9.2)
+      '@serwist/build': 9.2.0(typescript@5.9.2)
       pretty-bytes: 6.1.1
       zod: 4.0.5
     optionalDependencies:
       typescript: 5.9.2
 
-  '@serwist/window@9.1.1(typescript@5.9.2)':
+  '@serwist/window@9.2.0(typescript@5.9.2)':
     dependencies:
       '@types/trusted-types': 2.0.7
-      serwist: 9.1.1(typescript@5.9.2)
+      serwist: 9.2.0(typescript@5.9.2)
     optionalDependencies:
       typescript: 5.9.2
 
@@ -3207,7 +3199,7 @@ snapshots:
 
   ansi-regex@5.0.1: {}
 
-  ansi-regex@6.1.0: {}
+  ansi-regex@6.2.0: {}
 
   ansi-styles@4.3.0:
     dependencies:
@@ -4501,12 +4493,6 @@ snapshots:
 
   semver@7.7.2: {}
 
-  serwist@9.1.1(typescript@5.9.2):
-    dependencies:
-      idb: 8.0.3
-    optionalDependencies:
-      typescript: 5.9.2
-
   serwist@9.2.0(typescript@5.9.2):
     dependencies:
       idb: 8.0.3
@@ -4687,7 +4673,7 @@ snapshots:
 
   strip-ansi@7.1.0:
     dependencies:
-      ansi-regex: 6.1.0
+      ansi-regex: 6.2.0
 
   strip-bom@3.0.0: {}
 
