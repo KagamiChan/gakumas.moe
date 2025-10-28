@@ -34,7 +34,7 @@
     "@playwright/test": "^1.47.2",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/eslint": "^8.56.10",
-    "@types/node": "^22.1.0",
+    "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
