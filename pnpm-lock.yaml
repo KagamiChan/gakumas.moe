@@ -28,7 +28,7 @@ importers:
         version: 1.2.4(@types/react@19.2.6)(react@19.2.0)
       '@serwist/next':
         specifier: ^9.0.5
-        version: 9.2.1(next@15.5.6(@playwright/test@1.56.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)
+        version: 9.2.2(next@15.5.6(@playwright/test@1.56.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.0
         version: 0.13.8(arktype@2.1.20)(typescript@5.9.3)(zod@4.1.12)
@@ -630,8 +630,8 @@ packages:
   '@rushstack/eslint-patch@1.14.0':
     resolution: {integrity: sha512-WJFej426qe4RWOm9MMtP4V3CV4AucXolQty+GRgAWLgQXmpCuwzs7hEpxxhSc/znXUSxum9d/P/32MW0FlAAlA==}
 
-  '@serwist/build@9.2.1':
-    resolution: {integrity: sha512-mMCBZi82jVCxIhOu/D3ifkfmiuhdFHuelWK1zRlASLbkogH7YsS6qvGTl37vWBTVAWNKcKfVWLR6tq9AUB7BSg==}
+  '@serwist/build@9.2.2':
+    resolution: {integrity: sha512-1pLDy7WJqMDD7BY9ClmV00bwlAYMPq09Uw+EYeNyuMKuJ2qfVuGv3wTsMnKRr/7baRyEtZ9C+tOlEi6ZadM59w==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       typescript: '>=5.0.0'
@@ -639,8 +639,8 @@ packages:
       typescript:
         optional: true
 
-  '@serwist/next@9.2.1':
-    resolution: {integrity: sha512-CCTvZYSWK1hCmANViGLd7LvVc9r9wd4aaVX4Uk0F6fC0/Xn05GY52di7LGZ2NveGr1g+NjQvQSBhfxCQK95NIg==}
+  '@serwist/next@9.2.2':
+    resolution: {integrity: sha512-SpmJrstoAXQTmJj+o30QR98Dxp3TFGjqDAgIn0s5JQMnJwA5O3z8Bd8MpfQ5cLQfNm8tZidUgh1Iramzg1UiqA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       next: '>=14.0.0'
@@ -649,8 +649,8 @@ packages:
       typescript:
         optional: true
 
-  '@serwist/webpack-plugin@9.2.1':
-    resolution: {integrity: sha512-tBVlKifGP96aV7A8HD0xXIJAu6/sTyfRc827LFuLajNaX2d/dpo/0sMxO45jEI+GS7vaUdTcSl5DqcaRkkQ9wQ==}
+  '@serwist/webpack-plugin@9.2.2':
+    resolution: {integrity: sha512-Rehu1iATuoZh+Y9zVyJPcNAFUKZUcd7ia7tfSzm+FGLPmHqMdrJ24Att8aJRUWxlNglDEZfEme5+v1M0PjNOQA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       typescript: '>=5.0.0'
@@ -661,8 +661,8 @@ packages:
       webpack:
         optional: true
 
-  '@serwist/window@9.2.1':
-    resolution: {integrity: sha512-XkfV7+crhT4ArJCMcRle9AmzrxDjMRS6ExJwSPGmCqdb4JH/VyhcmJZljwoEpuZ1zh0cNvnWC8xEQ4p85jhxnQ==}
+  '@serwist/window@9.2.2':
+    resolution: {integrity: sha512-A3j5Z3BPPqB7nHgQCqKD72nl3C/Xf+cz6f200c6aSuvR+5bB+qOewGkmQrTxSEMT3XBLrOvI2PfgM3sgRCtajA==}
     peerDependencies:
       typescript: '>=5.0.0'
     peerDependenciesMeta:
@@ -1000,16 +1000,16 @@ packages:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
 
-  ansi-regex@6.2.0:
-    resolution: {integrity: sha512-TKY5pyBkHyADOPYlRT9Lx6F544mPl0vS5Ew7BJ45hA08Q+t3GjbueLliBWN3sMICk6+y7HdyxSzC4bWS8baBdg==}
+  ansi-regex@6.2.2:
+    resolution: {integrity: sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==}
     engines: {node: '>=12'}
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
-  ansi-styles@6.2.1:
-    resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
+  ansi-styles@6.2.3:
+    resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
     engines: {node: '>=12'}
 
   argparse@2.0.1:
@@ -1109,8 +1109,8 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
-  chalk@5.6.0:
-    resolution: {integrity: sha512-46QrSQFyVSEyYAgQ22hQ+zDa60YHA4fBstHmtSApj1Y5vKtG27fWowW03jCk5KcbXEWPZUIR894aARCA/G1kfQ==}
+  chalk@5.6.2:
+    resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   class-variance-authority@0.7.1:
@@ -2181,6 +2181,14 @@ packages:
       typescript:
         optional: true
 
+  serwist@9.2.2:
+    resolution: {integrity: sha512-o1CQHoU2jNQYlUeEcvLPOphrbAGf0ENwXIXXdfbsfxy5bxG6AD7LTdWtPAeo/RUdDPXlO1yv0dRhZla9M15jKg==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -2276,8 +2284,8 @@ packages:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
     engines: {node: '>=8'}
 
-  strip-ansi@7.1.0:
-    resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
+  strip-ansi@7.1.2:
+    resolution: {integrity: sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==}
     engines: {node: '>=12'}
 
   strip-bom@3.0.0:
@@ -2444,9 +2452,6 @@ packages:
 
   zod@4.1.12:
     resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
-
-  zod@4.1.5:
-    resolution: {integrity: sha512-rcUUZqlLJgBC33IT3PNMgsCq6TzLQEG/Ei/KTCU0PedSWRMAXoOUN+4t/0H+Q8bdnLPdqUYnvboJT0bn/229qg==}
 
 snapshots:
 
@@ -2618,7 +2623,7 @@ snapshots:
     dependencies:
       string-width: 5.1.2
       string-width-cjs: string-width@4.2.3
-      strip-ansi: 7.1.0
+      strip-ansi: 7.1.2
       strip-ansi-cjs: strip-ansi@6.0.1
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
@@ -2875,43 +2880,43 @@ snapshots:
 
   '@rushstack/eslint-patch@1.14.0': {}
 
-  '@serwist/build@9.2.1(typescript@5.9.3)':
+  '@serwist/build@9.2.2(typescript@5.9.3)':
     dependencies:
       common-tags: 1.8.2
       glob: 10.4.5
       pretty-bytes: 6.1.1
       source-map: 0.8.0-beta.0
-      zod: 4.1.5
+      zod: 4.1.12
     optionalDependencies:
       typescript: 5.9.3
 
-  '@serwist/next@9.2.1(next@15.5.6(@playwright/test@1.56.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)':
+  '@serwist/next@9.2.2(next@15.5.6(@playwright/test@1.56.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)':
     dependencies:
-      '@serwist/build': 9.2.1(typescript@5.9.3)
-      '@serwist/webpack-plugin': 9.2.1(typescript@5.9.3)
-      '@serwist/window': 9.2.1(typescript@5.9.3)
-      chalk: 5.6.0
+      '@serwist/build': 9.2.2(typescript@5.9.3)
+      '@serwist/webpack-plugin': 9.2.2(typescript@5.9.3)
+      '@serwist/window': 9.2.2(typescript@5.9.3)
+      chalk: 5.6.2
       glob: 10.4.5
       next: 15.5.6(@playwright/test@1.56.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      serwist: 9.2.1(typescript@5.9.3)
-      zod: 4.1.5
+      serwist: 9.2.2(typescript@5.9.3)
+      zod: 4.1.12
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
       - webpack
 
-  '@serwist/webpack-plugin@9.2.1(typescript@5.9.3)':
+  '@serwist/webpack-plugin@9.2.2(typescript@5.9.3)':
     dependencies:
-      '@serwist/build': 9.2.1(typescript@5.9.3)
+      '@serwist/build': 9.2.2(typescript@5.9.3)
       pretty-bytes: 6.1.1
-      zod: 4.1.5
+      zod: 4.1.12
     optionalDependencies:
       typescript: 5.9.3
 
-  '@serwist/window@9.2.1(typescript@5.9.3)':
+  '@serwist/window@9.2.2(typescript@5.9.3)':
     dependencies:
       '@types/trusted-types': 2.0.7
-      serwist: 9.2.1(typescript@5.9.3)
+      serwist: 9.2.2(typescript@5.9.3)
     optionalDependencies:
       typescript: 5.9.3
 
@@ -3203,13 +3208,13 @@ snapshots:
 
   ansi-regex@5.0.1: {}
 
-  ansi-regex@6.2.0: {}
+  ansi-regex@6.2.2: {}
 
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
 
-  ansi-styles@6.2.1: {}
+  ansi-styles@6.2.3: {}
 
   argparse@2.0.1: {}
 
@@ -3341,7 +3346,7 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chalk@5.6.0: {}
+  chalk@5.6.2: {}
 
   class-variance-authority@0.7.1:
     dependencies:
@@ -4487,6 +4492,12 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
+  serwist@9.2.2(typescript@5.9.3):
+    dependencies:
+      idb: 8.0.3
+    optionalDependencies:
+      typescript: 5.9.3
+
   set-function-length@1.2.2:
     dependencies:
       define-data-property: 1.1.4
@@ -4598,7 +4609,7 @@ snapshots:
     dependencies:
       eastasianwidth: 0.2.0
       emoji-regex: 9.2.2
-      strip-ansi: 7.1.0
+      strip-ansi: 7.1.2
 
   string.prototype.includes@2.0.1:
     dependencies:
@@ -4654,9 +4665,9 @@ snapshots:
     dependencies:
       ansi-regex: 5.0.1
 
-  strip-ansi@7.1.0:
+  strip-ansi@7.1.2:
     dependencies:
-      ansi-regex: 6.2.0
+      ansi-regex: 6.2.2
 
   strip-bom@3.0.0: {}
 
@@ -4856,14 +4867,12 @@ snapshots:
 
   wrap-ansi@8.1.0:
     dependencies:
-      ansi-styles: 6.2.1
+      ansi-styles: 6.2.3
       string-width: 5.1.2
-      strip-ansi: 7.1.0
+      strip-ansi: 7.1.2
 
   wrappy@1.0.2: {}
 
   yocto-queue@0.1.0: {}
 
   zod@4.1.12: {}
-
-  zod@4.1.5: {}
