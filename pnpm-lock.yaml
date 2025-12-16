@@ -31,7 +31,7 @@ importers:
         version: 9.2.3(next@15.5.9(@playwright/test@1.57.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.0
-        version: 0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.0)
+        version: 0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.1)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -61,7 +61,7 @@ importers:
         version: 1.0.7(tailwindcss@4.1.18)
       zod:
         specifier: ^4.0.0
-        version: 4.2.0
+        version: 4.2.1
     devDependencies:
       '@playwright/test':
         specifier: ^1.47.2
@@ -2452,8 +2452,8 @@ packages:
   zod@4.1.12:
     resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
 
-  zod@4.2.0:
-    resolution: {integrity: sha512-Bd5fw9wlIhtqCCxotZgdTOMwGm1a0u75wARVEY9HMs1X17trvA/lMi4+MGK5EUfYkXVTbX8UDiDKW4OgzHVUZw==}
+  zod@4.2.1:
+    resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
 
 snapshots:
 
@@ -2936,19 +2936,19 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@t3-oss/env-core@0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.0)':
+  '@t3-oss/env-core@0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.1)':
     optionalDependencies:
       arktype: 2.1.20
       typescript: 5.9.3
-      zod: 4.2.0
+      zod: 4.2.1
 
-  '@t3-oss/env-nextjs@0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.0)':
+  '@t3-oss/env-nextjs@0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.1)':
     dependencies:
-      '@t3-oss/env-core': 0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.0)
+      '@t3-oss/env-core': 0.13.10(arktype@2.1.20)(typescript@5.9.3)(zod@4.2.1)
     optionalDependencies:
       arktype: 2.1.20
       typescript: 5.9.3
-      zod: 4.2.0
+      zod: 4.2.1
 
   '@tailwindcss/node@4.1.18':
     dependencies:
@@ -4873,4 +4873,4 @@ snapshots:
 
   zod@4.1.12: {}
 
-  zod@4.2.0: {}
+  zod@4.2.1: {}
