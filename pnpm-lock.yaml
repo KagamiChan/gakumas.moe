@@ -52,7 +52,7 @@ importers:
         version: 7.69.0(react@19.2.3)
       serwist:
         specifier: ^9.0.5
-        version: 9.2.3(typescript@5.9.3)
+        version: 9.3.0(typescript@5.9.3)
       tailwind-merge:
         specifier: ^3.0.0
         version: 3.4.0
@@ -2182,6 +2182,14 @@ packages:
 
   serwist@9.2.3:
     resolution: {integrity: sha512-menorUH09SpLvU7R25TvG0TuQ12MUDpQ5NKGohbtREF8YI+0D++Abn59XCmvvMp2n740rBizIkeqWq0m6U+++g==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  serwist@9.3.0:
+    resolution: {integrity: sha512-ASuGP9U5LgZ5hB/iSwbtc1avstHBxWuhsJ9nbok38cnMMeFkyACB0L1nsVhKPck9yga23pie4yKWvRFsE/mn1w==}
     peerDependencies:
       typescript: '>=5.0.0'
     peerDependenciesMeta:
@@ -4487,6 +4495,12 @@ snapshots:
   semver@7.7.3: {}
 
   serwist@9.2.3(typescript@5.9.3):
+    dependencies:
+      idb: 8.0.3
+    optionalDependencies:
+      typescript: 5.9.3
+
+  serwist@9.3.0(typescript@5.9.3):
     dependencies:
       idb: 8.0.3
     optionalDependencies:
