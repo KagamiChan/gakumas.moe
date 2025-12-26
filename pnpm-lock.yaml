@@ -52,7 +52,7 @@ importers:
         version: 7.69.0(react@19.2.3)
       serwist:
         specifier: ^9.0.5
-        version: 9.4.0(typescript@5.9.3)
+        version: 9.4.1(typescript@5.9.3)
       tailwind-merge:
         specifier: ^3.0.0
         version: 3.4.0
@@ -2183,16 +2183,16 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serwist@9.3.0:
-    resolution: {integrity: sha512-ASuGP9U5LgZ5hB/iSwbtc1avstHBxWuhsJ9nbok38cnMMeFkyACB0L1nsVhKPck9yga23pie4yKWvRFsE/mn1w==}
+  serwist@9.4.0:
+    resolution: {integrity: sha512-+zP1ARFQ0EIxz5htsjKH7V0B1qqL8gE/+kWTl2ifIGh7YiNl4gMYb+yXixlIxC5kN2+mj/fBYGqGcQDI5tUqcQ==}
     peerDependencies:
       typescript: '>=5.0.0'
     peerDependenciesMeta:
       typescript:
         optional: true
 
-  serwist@9.4.0:
-    resolution: {integrity: sha512-+zP1ARFQ0EIxz5htsjKH7V0B1qqL8gE/+kWTl2ifIGh7YiNl4gMYb+yXixlIxC5kN2+mj/fBYGqGcQDI5tUqcQ==}
+  serwist@9.4.1:
+    resolution: {integrity: sha512-5Rl0MWSWhqbTsfio2E531jmOIvyVqpGEODv5W7TK1wCwCOS9xe7mRwAC6wypG3m2mTEI/0VFkC9bDG3GFqi3Vw==}
     peerDependencies:
       typescript: '>=5.0.0'
     peerDependenciesMeta:
@@ -4496,13 +4496,13 @@ snapshots:
 
   semver@7.7.3: {}
 
-  serwist@9.3.0(typescript@5.9.3):
+  serwist@9.4.0(typescript@5.9.3):
     dependencies:
       idb: 8.0.3
     optionalDependencies:
       typescript: 5.9.3
 
-  serwist@9.4.0(typescript@5.9.3):
+  serwist@9.4.1(typescript@5.9.3):
     dependencies:
       idb: 8.0.3
     optionalDependencies:
