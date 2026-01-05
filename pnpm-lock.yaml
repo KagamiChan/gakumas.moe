@@ -52,7 +52,7 @@ importers:
         version: 7.70.0(react@19.2.3)
       serwist:
         specifier: ^9.0.5
-        version: 9.4.2(typescript@5.9.3)
+        version: 9.4.4(typescript@5.9.3)
       tailwind-merge:
         specifier: ^3.0.0
         version: 3.4.0
@@ -663,6 +663,9 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  '@serwist/utils@9.4.4':
+    resolution: {integrity: sha512-esgNORd4ihQC5FAOaHRsAt0E6h7cYfsZvACWMotwIqcC+Cw0Q1NDoTg8hKV1sJ9Sc1UKA0SF3jyaWRPnlKTsGQ==}
 
   '@serwist/webpack-plugin@9.4.2':
     resolution: {integrity: sha512-pj7NxWkEB9yG6xQJ3NKGnbw+sFdzIi66eLgfvVIPco2toBbNllC/SFLo3+VtE0ITi5XcMAgfT87dT1Y/0iVGVA==}
@@ -2213,6 +2216,14 @@ packages:
       typescript:
         optional: true
 
+  serwist@9.4.4:
+    resolution: {integrity: sha512-MrsVo5ruv8De4zRphWRyBh2XnQNtSplVg4NR1j4RNoQrjECMLncxYUirnJqkplBH7CA5IIUl+mlsKs4uD5JjiA==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -2948,6 +2959,8 @@ snapshots:
       typescript: 5.9.3
     transitivePeerDependencies:
       - webpack
+
+  '@serwist/utils@9.4.4': {}
 
   '@serwist/webpack-plugin@9.4.2(typescript@5.9.3)':
     dependencies:
@@ -4540,6 +4553,13 @@ snapshots:
 
   serwist@9.4.2(typescript@5.9.3):
     dependencies:
+      idb: 8.0.3
+    optionalDependencies:
+      typescript: 5.9.3
+
+  serwist@9.4.4(typescript@5.9.3):
+    dependencies:
+      '@serwist/utils': 9.4.4
       idb: 8.0.3
     optionalDependencies:
       typescript: 5.9.3
